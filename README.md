@@ -9,7 +9,7 @@
 ## 📮 미션 제출 방법
 
 - 미션 구현을 완료한 후 GitHub을 통해 제출해야 한다.
-  - GitHub을 활용한 제출 방법은 [과제 제출]([https://github.com/woowacourse/woowacourse-docs/tree/master/precourse](https://neon-mat-b2e.notion.site/cd0af10318e74ac78da5353cd1cfba66?pvs=4) 문서를 참고해 제출한다.
+  - GitHub을 활용한 제출 방법은 [과제 제출](https://neon-mat-b2e.notion.site/cd0af10318e74ac78da5353cd1cfba66?pvs=4) 문서를 참고해 제출한다.
 
 ## 🚨 과제 제출 전 체크 리스트 - 0점 방지
 
