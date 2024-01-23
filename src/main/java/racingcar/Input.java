@@ -7,9 +7,9 @@ import java.util.Arrays;
 public class Input {
     private static final int MAX_LENGTH_NAME = 5;
 
-    public static void inputName(){
+    public static ArrayList<String> inputName(){
         String names = Console.readLine();
-        splitName(names);
+        return splitName(names);
     }
 
     public static ArrayList<String> splitName(String names){
