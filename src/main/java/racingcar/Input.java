@@ -20,6 +20,7 @@ public class Input {
 
     public static int inputNumber() {
         String number = Console.readLine();
+        checkNumber(number);
         return Integer.parseInt(number);
     }
 
@@ -29,5 +30,15 @@ public class Input {
                 throw new IllegalArgumentException("자동차 이름은 5글자까지 입력 가능합니다.");
             }
         }
+    }
+
+    public static void checkNumber(String number){
+        if(!isNumber(number) || Integer.parseInt(number) <= 0){
+            throw new IllegalArgumentException("1 이상의 올바른 수를 입력해주세요.");
+        }
+    }
+
+    public static boolean isNumber(String number) {
+        return number.chars().allMatch(Character::isDigit);
     }
 }
