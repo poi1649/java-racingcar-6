@@ -7,13 +7,22 @@ public class Car {
     private static int raceScore = 0;
     private static final int FORWARD_CONSTANT = 4;
 
-    private Car(String name){
+    public Car(String name){
         this.name = name;
     }
 
-    private static void forward(){
+    public void forward(){
         if(Randoms.pickNumberInRange(0,9) >= FORWARD_CONSTANT){
             raceScore += 1;
         }
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getRaceScore(){
+        return raceScore;
+    }
+
 }
