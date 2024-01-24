@@ -6,7 +6,6 @@ public class RacingGameManager {
     private static ArrayList<Car> cars = new ArrayList<>();
     private static int raceCount;
     private static int maxScore = 0;
-    private static int winnersCount = 0;
     public static void startRace(){
         carEntry();
         runRace();
@@ -38,14 +37,16 @@ public class RacingGameManager {
         return cars;
     }
 
-    public static void whoIsWinner(ArrayList<Car> cars){
+    public static ArrayList<String> whoIsWinner(ArrayList<Car> cars){
+        ArrayList<String> winners = new ArrayList<>();
         winnerScore(cars);
         for(Car car: cars){
             if(car.getRaceScore() == maxScore){
-                winnersCount += 1;
-                printWinner(car.getName());
+                winners.add(car.getName());
+                //printWinner(car.getName());
             }
         }
+        return winners;
     }
 
     public static void winnerScore(ArrayList<Car> cars){
