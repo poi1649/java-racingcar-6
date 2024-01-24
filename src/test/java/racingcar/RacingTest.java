@@ -23,4 +23,15 @@ public class RacingTest {
         firstCar.forward();
         assertThat(firstCar.getRaceScore()).isEqualTo(1);
     }
+
+    @Test
+    void 우승자_선정_결과_테스트(){
+        ArrayList<Car> cars = new ArrayList<>();
+        for(int i=0; i<10; i++){
+            cars.add(new Car("car"+i));
+            cars.get(0).forward();
+        }
+        ArrayList<String> winners = RacingGameManager.whoIsWinner(cars);
+        assertThat(winners.size()).isEqualTo(1);
+    }
 }
