@@ -9,7 +9,7 @@ public class RacingGameManager {
     public static void startRace(){
         carEntry();
         runRace();
-        whoIsWinner(cars);
+        printWinner(whoIsWinner(cars));
     }
 
     public static void carEntry(){
@@ -23,6 +23,7 @@ public class RacingGameManager {
     }
 
     public static void runRace(){
+        Output.resultMessage();
         for(int i=0; i<raceCount; i++){
             ArrayList<Car> cars = raceOneTime();
             Output.printResult(cars);
@@ -37,13 +38,16 @@ public class RacingGameManager {
         return cars;
     }
 
+    public static void printWinner(ArrayList<String> names){
+        Output.printWinner(names);
+    }
+
     public static ArrayList<String> whoIsWinner(ArrayList<Car> cars){
         ArrayList<String> winners = new ArrayList<>();
         winnerScore(cars);
         for(Car car: cars){
             if(car.getRaceScore() == maxScore){
                 winners.add(car.getName());
-                //printWinner(car.getName());
             }
         }
         return winners;
