@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Input {
-    private static final int MAX_LENGTH_NAME = 5;
-
     public static ArrayList<String> inputName() {
         String names = Console.readLine();
         return splitName(names);
@@ -26,7 +24,7 @@ public class Input {
 
     public static void checkName(ArrayList<String> nameList) {
         for(String name: nameList){
-            if(name.length() > MAX_LENGTH_NAME) {
+            if(name.length() > 5) {
                 throw new IllegalArgumentException("자동차 이름은 5글자까지 입력 가능합니다.");
             }
         }
