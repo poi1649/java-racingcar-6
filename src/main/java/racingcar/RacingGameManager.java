@@ -9,7 +9,7 @@ public class RacingGameManager {
     public static void startRace() {
         carEntry();
         runRace();
-        printWinner(whoIsWinner(cars));
+        printWinner();
     }
 
     public static void carEntry() {
@@ -37,8 +37,8 @@ public class RacingGameManager {
         return cars;
     }
 
-    public static void printWinner(ArrayList<String> names) {
-        Output.printWinner(names);
+    public static void printWinner() {
+        Output.printWinner(whoIsWinner(cars));
     }
 
     public static ArrayList<String> whoIsWinner(ArrayList<Car> cars) {
