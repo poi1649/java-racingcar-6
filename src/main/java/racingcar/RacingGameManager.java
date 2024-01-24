@@ -7,6 +7,7 @@ public class RacingGameManager {
     private static int raceCount;
     public static void startRace(){
         carEntry();
+        runRace();
     }
 
     public static void carEntry(){
@@ -15,5 +16,18 @@ public class RacingGameManager {
         for(String name: names){
             cars.add(new Car(name));
         }
+    }
+
+    public static void runRace(){
+        for(int i=0; i<raceCount; i++){
+            ArrayList<Car> cars = raceOneTime();
+        }
+    }
+
+    public static ArrayList<Car> raceOneTime(){
+        for(Car car: cars){
+            car.forward();
+        }
+        return cars;
     }
 }
