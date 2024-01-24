@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 public class InputTest {
-
     @Test
     void 자동차_이름_분할_테스트() {
         String names = "ura,zara";
