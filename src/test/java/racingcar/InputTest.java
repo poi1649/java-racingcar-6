@@ -9,15 +9,15 @@ import java.util.ArrayList;
 public class InputTest {
 
     @Test
-    void 자동차_이름_분할_테스트(){
+    void 자동차_이름_분할_테스트() {
         String names = "ura,zara";
         ArrayList<String> result = Input.splitName(names);
-        assertThat(result).contains("zara","ura");
-        assertThat(result).containsExactly("ura","zara");
+        assertThat(result).contains("zara", "ura");
+        assertThat(result).containsExactly("ura", "zara");
     }
 
     @Test
-    void 자동차_이름_예외_처리_테스트(){
+    void 자동차_이름_예외_처리_테스트() {
         String input = "abc123,abc,aabb";
         assertThatThrownBy(() -> Input.splitName(input))
                 .isInstanceOf(IllegalArgumentException.class)
@@ -25,7 +25,7 @@ public class InputTest {
     }
 
     @Test
-    void 시도할_회수_예외_처리_테스트(){
+    void 시도할_회수_예외_처리_테스트() {
         String number = "aab";
         assertThatThrownBy(() -> Input.checkNumber(number))
                 .isInstanceOf(IllegalArgumentException.class)

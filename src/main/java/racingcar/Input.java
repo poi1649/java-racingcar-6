@@ -7,12 +7,12 @@ import java.util.Arrays;
 public class Input {
     private static final int MAX_LENGTH_NAME = 5;
 
-    public static ArrayList<String> inputName(){
+    public static ArrayList<String> inputName() {
         String names = Console.readLine();
         return splitName(names);
     }
 
-    public static ArrayList<String> splitName(String names){
+    public static ArrayList<String> splitName(String names) {
         ArrayList<String> nameList =  new ArrayList<>(Arrays.asList(names.split(",")));
         checkName(nameList);
         return nameList;
@@ -32,7 +32,7 @@ public class Input {
         }
     }
 
-    public static void checkNumber(String number){
+    public static void checkNumber(String number) {
         if(!isNumber(number) || Integer.parseInt(number) <= 0){
             throw new IllegalArgumentException("1 이상의 올바른 수를 입력해주세요.");
         }
