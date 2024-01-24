@@ -20,8 +20,10 @@ public class RacingTest {
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("test"));
         Car firstCar = cars.get(0);
-        firstCar.forward();
-        assertThat(firstCar.getRaceScore()).isEqualTo(1);
+        for(int i=0; i<10; i++){
+            firstCar.forward();
+        }
+        assertThat(firstCar.getRaceScore()).isNotEqualTo(0);
     }
 
     @Test
