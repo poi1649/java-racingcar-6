@@ -25,13 +25,12 @@ public class RacingGameManager {
     public static void runRace() {
         Output.resultMessage();
         for(int i=0; i<raceCount; i++) {
-            ArrayList<Car> cars = raceOneTime();
+            ArrayList<Car> cars = runRaceOneTime();
             Output.printResult(cars);
         }
-
     }
 
-    public static ArrayList<Car> raceOneTime() {
+    public static ArrayList<Car> runRaceOneTime() {
         for(Car car: cars) {
             car.forward();
         }
