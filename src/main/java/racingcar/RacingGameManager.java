@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public class RacingGameManager {
     private static ArrayList<Car> cars = new ArrayList<>();
     private static int raceCount;
+    private static int maxScore = 0;
+    private static int winnersCount = 0;
     public static void startRace(){
         carEntry();
         runRace();
+        whoIsWinner(cars);
     }
 
     public static void carEntry(){
@@ -25,6 +28,7 @@ public class RacingGameManager {
             ArrayList<Car> cars = raceOneTime();
             Output.printResult(cars);
         }
+
     }
 
     public static ArrayList<Car> raceOneTime(){
@@ -32,5 +36,24 @@ public class RacingGameManager {
             car.forward();
         }
         return cars;
+    }
+
+    public static void whoIsWinner(ArrayList<Car> cars){
+        winnerScore(cars);
+        for(Car car: cars){
+            if(car.getRaceScore() == maxScore){
+                winnersCount += 1;
+                printWinner(car.getName());
+            }
+        }
+    }
+
+    public static void winnerScore(ArrayList<Car> cars){
+        for(Car car: cars){
+            int score = car.getRaceScore();
+            if(score > maxScore){
+                maxScore = score;
+            }
+        }
     }
 }
