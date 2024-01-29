@@ -25,7 +25,7 @@ public class InputTest {
 
     @Test
     void 시도할_회수_예외_처리_테스트() {
-        String number = "aab";
+        String number = "0";
         assertThatThrownBy(() -> Input.checkNumber(number))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("1 이상의 올바른 수를 입력해주세요.");
