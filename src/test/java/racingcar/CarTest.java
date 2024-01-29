@@ -3,7 +3,6 @@ package racingcar;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
 
 public class CarTest {
     private static final int MOVE_FORWARD = 4;
