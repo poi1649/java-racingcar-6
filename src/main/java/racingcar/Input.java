@@ -16,18 +16,18 @@ public class Input {
         return nameList;
     }
 
-    public static int inputNumber() {
-        String number = Console.readLine();
-        checkNumber(number);
-        return Integer.parseInt(number);
-    }
-
     public static void checkName(ArrayList<String> nameList) {
         for(String name: nameList){
             if(name.length() > 5) {
                 throw new IllegalArgumentException("자동차 이름은 5글자까지 입력 가능합니다.");
             }
         }
+    }
+
+    public static int inputNumber() {
+        String number = Console.readLine();
+        checkNumber(number);
+        return Integer.parseInt(number);
     }
 
     public static void checkNumber(String number) {
