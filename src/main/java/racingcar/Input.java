@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Input {
+    private Input() {
+
+    }
+
     public static ArrayList<String> inputName() {
         String names = Console.readLine();
         return splitName(names);
