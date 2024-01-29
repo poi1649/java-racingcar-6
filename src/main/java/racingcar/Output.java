@@ -33,14 +33,7 @@ public class Output {
     }
 
     public static void winner(ArrayList<String> names) {
-        int winnerCount = 1;
         System.out.print("최종 우승자 : ");
-        for (String name : names) {
-            if (winnerCount > 1) {
-                System.out.print(", ");
-            }
-            winnerCount += 1;
-            System.out.print(name);
-        }
+        System.out.println(String.join(", ", names));
     }
 }
