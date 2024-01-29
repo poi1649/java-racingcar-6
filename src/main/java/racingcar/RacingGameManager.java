@@ -5,13 +5,14 @@ import java.util.ArrayList;
 public class RacingGameManager {
     private static final ArrayList<Car> cars = new ArrayList<>();
     private static int raceCount;
+
     public static void startRace() {
-        carEntry();
+        entryCar();
         runRace();
         printWinner();
     }
 
-    public static void carEntry() {
+    public static void entryCar() {
         Output.inputNameMessage();
         ArrayList<String> names = Input.inputName();
         Output.inputNumberMessage();
@@ -25,26 +26,26 @@ public class RacingGameManager {
         Output.resultMessage();
         for(int i=0; i<raceCount; i++) {
             ArrayList<Car> cars = runRaceOneTime();
-            Output.printResult(cars);
+            Output.result(cars);
         }
     }
 
     public static ArrayList<Car> runRaceOneTime() {
         for(Car car: cars) {
-            car.forward();
+            car.move();
         }
         return cars;
     }
 
     public static void printWinner() {
-        Output.printWinner(whoIsWinner(cars));
+        Output.winner(findWinner(cars));
     }
 
-    public static ArrayList<String> whoIsWinner(ArrayList<Car> cars) {
+    public static ArrayList<String> findWinner(ArrayList<Car> cars) {
         ArrayList<String> winners = new ArrayList<>();
         int highScore = findHighScore(cars);
         for(Car car: cars) {
-            if(car.getRaceScore() == highScore){
+            if(car.getMoveDistance() == highScore){
                 winners.add(car.getName());
             }
         }
@@ -54,7 +55,7 @@ public class RacingGameManager {
     public static int findHighScore(ArrayList<Car> cars) {
         int highScore = 0;
         for(Car car: cars) {
-            int score = car.getRaceScore();
+            int score = car.getMoveDistance();
             if(score > highScore) {
                 highScore = score;
             }

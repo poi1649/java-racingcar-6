@@ -20,9 +20,9 @@ public class RacingTest {
         cars.add(new Car("test"));
         Car firstCar = cars.get(0);
         for(int i=0; i<10; i++) {
-            firstCar.forward();
+            firstCar.move();
         }
-        assertThat(firstCar.getRaceScore()).isNotEqualTo(0);
+        assertThat(firstCar.getMoveDistance()).isNotEqualTo(0);
     }
 
     @Test
@@ -30,9 +30,9 @@ public class RacingTest {
         ArrayList<Car> cars = new ArrayList<>();
         for(int i=0; i<10; i++) {
             cars.add(new Car("car"+i));
-            cars.get(0).forward();
+            cars.get(0).move();
         }
-        ArrayList<String> winners = RacingGameManager.whoIsWinner(cars);
+        ArrayList<String> winners = RacingGameManager.findWinner(cars);
         assertThat(winners.size()).isEqualTo(1);
     }
 }

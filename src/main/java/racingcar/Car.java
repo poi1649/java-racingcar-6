@@ -4,17 +4,16 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
     private final String name;
-    private int raceScore;
-    private static final int FORWARD_CONSTANT = 4;
+    private int moveDistance;
 
     public Car(String name) {
         this.name = name;
-        raceScore = 0;
+        moveDistance = 0;
     }
 
-    public void forward() {
-        if(Randoms.pickNumberInRange(0, 9) >= FORWARD_CONSTANT) {
-            raceScore += 1;
+    public void move() {
+        if(Randoms.pickNumberInRange(0, 9) >= 4) {
+            moveDistance += 1;
         }
     }
 
@@ -22,7 +21,7 @@ public class Car {
         return name;
     }
 
-    public int getRaceScore() {
-        return raceScore;
+    public int getMoveDistance() {
+        return moveDistance;
     }
 }

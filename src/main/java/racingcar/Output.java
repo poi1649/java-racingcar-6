@@ -15,16 +15,16 @@ public class Output {
         System.out.println("\n실행 결과");
     }
 
-    public static void printResult(ArrayList<Car> cars) {
+    public static void result(ArrayList<Car> cars) {
         for(Car car: cars) {
-            printProgress(car);
+            progress(car);
         }
         System.out.print("\n");
     }
 
-    public static void printProgress(Car car) {
+    public static void progress(Car car) {
         String name = car.getName();
-        int number = car.getRaceScore();
+        int number = car.getMoveDistance();
         System.out.printf("%s : ",name);
         for(int i=0; i<number; i++){
             System.out.print("-");
@@ -32,7 +32,7 @@ public class Output {
         System.out.print("\n");
     }
 
-    public static void printWinner(ArrayList<String> names) {
+    public static void winner(ArrayList<String> names) {
         int winnerCount = 1;
         System.out.print("최종 우승자 : ");
         for (String name : names) {
