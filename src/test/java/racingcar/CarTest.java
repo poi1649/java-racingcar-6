@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
 public class CarTest {
-    private static final int MOVE_FORWARD = 4;
-
     @Test
     void carMoveTest() {
         Car testCar = new Car("test");
