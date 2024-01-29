@@ -28,11 +28,16 @@ public class RacingTest {
     @Test
     void 우승자_선정_결과_테스트() {
         ArrayList<Car> cars = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            cars.add(new Car("car" + i));
+        cars.add(new Car("test1"));
+        cars.add(new Car("test2"));
+        cars.add(new Car("test3"));
+        while (cars.get(0).getMoveDistance() < 1) {
             cars.get(0).move();
         }
+        while (cars.get(1).getMoveDistance() < 1) {
+            cars.get(1).move();
+        }
         ArrayList<String> winners = RacingGameManager.findWinner(cars);
-        assertThat(winners.size()).isEqualTo(1);
+        assertThat(winners).containsExactly("test1", "test2");
     }
 }
