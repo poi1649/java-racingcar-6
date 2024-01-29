@@ -16,7 +16,7 @@ public class Output {
     }
 
     public static void result(ArrayList<Car> cars) {
-        for(Car car: cars) {
+        for (Car car : cars) {
             progress(car);
         }
         System.out.print("\n");
@@ -25,8 +25,8 @@ public class Output {
     public static void progress(Car car) {
         String name = car.getName();
         int number = car.getMoveDistance();
-        System.out.printf("%s : ",name);
-        for(int i=0; i<number; i++){
+        System.out.printf("%s : ", name);
+        for (int i = 0; i < number; i++) {
             System.out.print("-");
         }
         System.out.print("\n");

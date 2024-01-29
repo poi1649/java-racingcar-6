@@ -17,21 +17,21 @@ public class RacingGameManager {
         ArrayList<String> names = Input.inputName();
         Output.inputNumberMessage();
         raceCount = Input.inputNumber();
-        for(String name: names) {
+        for (String name : names) {
             cars.add(new Car(name));
         }
     }
 
     public static void runRace() {
         Output.resultMessage();
-        for(int i=0; i<raceCount; i++) {
+        for (int i = 0; i < raceCount; i++) {
             ArrayList<Car> cars = runRaceOneTime();
             Output.result(cars);
         }
     }
 
     public static ArrayList<Car> runRaceOneTime() {
-        for(Car car: cars) {
+        for (Car car : cars) {
             car.move();
         }
         return cars;
@@ -44,8 +44,8 @@ public class RacingGameManager {
     public static ArrayList<String> findWinner(ArrayList<Car> cars) {
         ArrayList<String> winners = new ArrayList<>();
         int highScore = findHighScore(cars);
-        for(Car car: cars) {
-            if(car.getMoveDistance() == highScore){
+        for (Car car : cars) {
+            if (car.getMoveDistance() == highScore) {
                 winners.add(car.getName());
             }
         }
@@ -54,9 +54,9 @@ public class RacingGameManager {
 
     public static int findHighScore(ArrayList<Car> cars) {
         int highScore = 0;
-        for(Car car: cars) {
+        for (Car car : cars) {
             int score = car.getMoveDistance();
-            if(score > highScore) {
+            if (score > highScore) {
                 highScore = score;
             }
         }

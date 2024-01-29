@@ -19,7 +19,7 @@ public class RacingTest {
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("test"));
         Car firstCar = cars.get(0);
-        for(int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             firstCar.move();
         }
         assertThat(firstCar.getMoveDistance()).isNotEqualTo(0);
@@ -28,8 +28,8 @@ public class RacingTest {
     @Test
     void 우승자_선정_결과_테스트() {
         ArrayList<Car> cars = new ArrayList<>();
-        for(int i=0; i<10; i++) {
-            cars.add(new Car("car"+i));
+        for (int i = 0; i < 10; i++) {
+            cars.add(new Car("car" + i));
             cars.get(0).move();
         }
         ArrayList<String> winners = RacingGameManager.findWinner(cars);
