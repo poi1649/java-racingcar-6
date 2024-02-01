@@ -16,9 +16,9 @@ public class Input {
     }
 
     public static ArrayList<String> splitName(String names) {
-        ArrayList<String> nameList = new ArrayList<>(Arrays.asList(names.split(",")));
-        checkName(nameList);
-        return nameList;
+        ArrayList<String> splitNames = new ArrayList<>(Arrays.asList(names.split(",")));
+        checkName(splitNames);
+        return splitNames;
     }
 
     public static void checkName(ArrayList<String> nameList) {
