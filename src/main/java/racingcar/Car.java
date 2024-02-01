@@ -12,10 +12,14 @@ public class Car {
         distance = 0;
     }
 
-    public void move() {
-        if (Randoms.pickNumberInRange(0, 9) >= FORWARD_THRESHOLD) {
+    public void move(int number) {
+        if (number >= FORWARD_THRESHOLD) {
             distance += 1;
         }
+    }
+
+    public int pickNumber() {
+        return Randoms.pickNumberInRange(0, 9);
     }
 
     public boolean isWinner(int highScore){

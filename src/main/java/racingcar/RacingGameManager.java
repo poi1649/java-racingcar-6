@@ -32,7 +32,7 @@ public class RacingGameManager {
 
     public static void runRaceOneTime() {
         for (Car car : cars) {
-            car.move();
+            car.move(car.pickNumber());
         }
     }
 
