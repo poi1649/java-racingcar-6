@@ -7,12 +7,12 @@ public class RacingGameManager {
     private static int raceCount;
 
     public static void startRace() {
-        entryCar();
+        registerCar();
         runRace();
         printWinner();
     }
 
-    public static void entryCar() {
+    public static void registerCar() {
         Output.inputNameMessage();
         ArrayList<String> names = Input.readName();
         Output.inputNumberMessage();
