@@ -14,9 +14,9 @@ public class RacingGameManager {
 
     public static void entryCar() {
         Output.inputNameMessage();
-        ArrayList<String> names = Input.inputName();
+        ArrayList<String> names = Input.readName();
         Output.inputNumberMessage();
-        raceCount = Input.inputNumber();
+        raceCount = Input.readNumber();
         for (String name : names) {
             cars.add(new Car(name));
         }

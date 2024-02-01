@@ -10,7 +10,7 @@ public class Input {
 
     }
 
-    public static ArrayList<String> inputName() {
+    public static ArrayList<String> readName() {
         String names = Console.readLine();
         return splitName(names);
     }
@@ -29,7 +29,7 @@ public class Input {
         }
     }
 
-    public static int inputNumber() {
+    public static int readNumber() {
         String number = Console.readLine();
         checkNumber(number);
         return Integer.parseInt(number);
