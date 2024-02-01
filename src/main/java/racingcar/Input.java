@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class Input {
     private static final int MAX_NAME_LENGTH = 5;
+
     private Input() {
 
     }
@@ -42,7 +43,6 @@ public class Input {
             }
             throw new IllegalArgumentException("숫자를 입력해 주세요.");
         }
-
     }
 
     public static boolean isNumber(String number) {
