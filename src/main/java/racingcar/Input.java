@@ -36,7 +36,7 @@ public class Input {
     }
 
     public static void checkNumber(String number) {
-        if (!isNumber(number) || Integer.parseInt(number) <= 0) {
+        if (!isNumber(number)) {
             if (Integer.parseInt(number) <= 0) {
                 throw new IllegalArgumentException("1 이상의 수를 입력해 주세요.");
             }
