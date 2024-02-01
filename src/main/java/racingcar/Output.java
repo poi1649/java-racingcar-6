@@ -19,14 +19,14 @@ public class Output {
         System.out.println("\n실행 결과");
     }
 
-    public static void result(ArrayList<Car> cars) {
+    public static void showResult(ArrayList<Car> cars) {
         for (Car car : cars) {
-            progress(car);
+            showProgress(car);
         }
         System.out.print("\n");
     }
 
-    public static void progress(Car car) {
+    public static void showProgress(Car car) {
         String name = car.getName();
         int number = car.getMoveDistance();
         System.out.printf("%s : ", name);
@@ -36,7 +36,7 @@ public class Output {
         System.out.print("\n");
     }
 
-    public static void winner(ArrayList<String> names) {
+    public static void showWinner(ArrayList<String> names) {
         System.out.print("최종 우승자 : ");
         System.out.println(String.join(", ", names));
     }

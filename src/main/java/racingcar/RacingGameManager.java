@@ -26,7 +26,7 @@ public class RacingGameManager {
         Output.resultMessage();
         for (int i = 0; i < raceCount; i++) {
             runRaceOneTime();
-            Output.result(cars);
+            Output.showResult(cars);
         }
     }
 
@@ -37,7 +37,7 @@ public class RacingGameManager {
     }
 
     public static void printWinner() {
-        Output.winner(findWinner(cars));
+        Output.showWinner(findWinner(cars));
     }
 
     public static ArrayList<String> findWinner(ArrayList<Car> cars) {
