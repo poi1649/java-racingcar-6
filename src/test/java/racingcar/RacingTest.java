@@ -18,9 +18,11 @@ public class RacingTest {
     @Test
     void 경주_진행시_자동차_이동_테스트() {
         ArrayList<Car> cars = new ArrayList<>();
-        cars.add(new Car("test"));
-        cars.get(0).move(FORWARD_THRESHOLD);
-        assertThat(cars.get(0).getMoveDistance()).isEqualTo(1);
+        for(int i=0; i<10; i++) {
+            cars.add(new Car("test"));
+            cars.get(i).move(FORWARD_THRESHOLD);
+            assertThat(cars.get(i).getMoveDistance()).isEqualTo(1);
+        }
     }
 
     @Test
