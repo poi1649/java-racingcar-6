@@ -45,7 +45,7 @@ public class RacingGameManager {
         ArrayList<String> winners = new ArrayList<>();
         int highScore = findHighScore(cars);
         for (Car car : cars) {
-            if (car.getMoveDistance() == highScore) {
+            if (car.isWinner(highScore)) {
                 winners.add(car.getName());
             }
         }

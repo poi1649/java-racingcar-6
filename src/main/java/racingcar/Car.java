@@ -17,6 +17,10 @@ public class Car {
         }
     }
 
+    public boolean isWinner(int highScore){
+        return this.moveDistance == highScore;
+    }
+
     public String getName() {
         return name;
     }
