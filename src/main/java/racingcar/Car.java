@@ -4,21 +4,22 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
     private final String name;
-    private int moveDistance;
+    private int distance;
+    private static final int FORWARD_THRESHOLD = 4;
 
     public Car(String name) {
         this.name = name;
-        moveDistance = 0;
+        distance = 0;
     }
 
     public void move() {
-        if (Randoms.pickNumberInRange(0, 9) >= 4) {
-            moveDistance += 1;
+        if (Randoms.pickNumberInRange(0, 9) >= FORWARD_THRESHOLD) {
+            distance += 1;
         }
     }
 
     public boolean isWinner(int highScore){
-        return this.moveDistance == highScore;
+        return this.distance == highScore;
     }
 
     public String getName() {
@@ -26,6 +27,6 @@ public class Car {
     }
 
     public int getMoveDistance() {
-        return moveDistance;
+        return distance;
     }
 }
