@@ -1,6 +1,7 @@
 package racingcar;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RacingGameManager {
     private static final ArrayList<Car> cars = new ArrayList<>();
@@ -14,7 +15,7 @@ public class RacingGameManager {
 
     public static void registerCar() {
         Output.inputNameMessage();
-        ArrayList<String> names = Input.readName();
+        List<String> names = Input.readName();
         Output.inputNumberMessage();
         raceCount = Input.readNumber();
         for (String name : names) {

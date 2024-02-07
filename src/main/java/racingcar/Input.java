@@ -3,6 +3,7 @@ package racingcar;
 import camp.nextstep.edu.missionutils.Console;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Input {
     private static final int MAX_NAME_LENGTH = 5;
@@ -11,18 +12,18 @@ public class Input {
 
     }
 
-    public static ArrayList<String> readName() {
+    public static List<String> readName() {
         String names = Console.readLine();
         return splitName(names);
     }
 
-    public static ArrayList<String> splitName(String names) {
-        ArrayList<String> splitNames = new ArrayList<>(Arrays.asList(names.split(",")));
+    public static List<String> splitName(String names) {
+        List<String> splitNames = Arrays.asList(names.split(","));
         checkName(splitNames);
         return splitNames;
     }
 
-    public static void checkName(ArrayList<String> nameList) {
+    public static void checkName(List<String> nameList) {
         for (String name : nameList) {
             if (name.length() > MAX_NAME_LENGTH) {
                 throw new IllegalArgumentException("자동차 이름은 5글자까지 입력 가능합니다.");
