@@ -18,10 +18,6 @@ public class Car {
         }
     }
 
-    public int pickNumber() {
-        return Randoms.pickNumberInRange(0, 9);
-    }
-
     public boolean isWinner(int highScore) {
         return this.distance == highScore;
     }

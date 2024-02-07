@@ -1,5 +1,6 @@
 package racingcar;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +34,12 @@ public class RacingGameManager {
 
     public static void runRaceOneTime() {
         for (Car car : cars) {
-            car.move(car.pickNumber());
+            car.move(pickNumber());
         }
+    }
+
+    public static int pickNumber() {
+        return Randoms.pickNumberInRange(0, 9);
     }
 
     public static void printWinner() {
