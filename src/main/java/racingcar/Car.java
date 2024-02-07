@@ -1,7 +1,5 @@
 package racingcar;
 
-import camp.nextstep.edu.missionutils.Randoms;
-
 public class Car {
     private static final int FORWARD_THRESHOLD = 4;
     private final String name;
