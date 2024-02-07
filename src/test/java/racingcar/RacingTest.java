@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class RacingTest {
     private static final int FORWARD_THRESHOLD = 4;
+    private static final int STOP_THRESHOLD = 3;
+
     @Test
     void 자동차_등록_테스트() {
         ArrayList<Car> cars = new ArrayList<>();
@@ -18,10 +20,15 @@ public class RacingTest {
     @Test
     void 경주_진행시_자동차_이동_테스트() {
         ArrayList<Car> cars = new ArrayList<>();
-        for(int i=0; i<10; i++) {
-            cars.add(new Car("test"));
+        for (int i = 0; i < 3; i++) {
+            cars.add(new Car("test" + i));
             cars.get(i).move(FORWARD_THRESHOLD);
             assertThat(cars.get(i).getMoveDistance()).isEqualTo(1);
+        }
+        for (int i = 3; i < 6; i++) {
+            cars.add(new Car("test" + i));
+            cars.get(i).move(STOP_THRESHOLD);
+            assertThat(cars.get(i).getMoveDistance()).isEqualTo(0);
         }
     }
 
