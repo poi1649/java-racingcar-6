@@ -9,7 +9,7 @@ public class Car {
 
     public Car(String name) {
         this.name = name;
-        distance = 0;
+        this.distance = 0;
     }
 
     public void move(int number) {
