@@ -34,13 +34,14 @@ public class RacingTest {
 
     @Test
     void 우승자_선정_결과_테스트() {
+        RacingGameManager race = new RacingGameManager();
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("test1"));
         cars.add(new Car("test2"));
         cars.add(new Car("test3"));
         cars.get(0).move(FORWARD_THRESHOLD);
         cars.get(1).move(FORWARD_THRESHOLD);
-        ArrayList<String> winners = RacingGameManager.findWinner(cars);
+        ArrayList<String> winners = race.findWinner(cars);
         assertThat(winners).containsExactly("test1", "test2");
     }
 }
