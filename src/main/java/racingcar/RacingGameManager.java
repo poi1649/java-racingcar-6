@@ -52,7 +52,7 @@ public class RacingGameManager {
         return winners;
     }
 
-    public static int findHighScore(ArrayList<Car> cars) {
+    private static int findHighScore(ArrayList<Car> cars) {
         int highScore = 0;
         for (Car car : cars) {
             int score = car.getMoveDistance();
