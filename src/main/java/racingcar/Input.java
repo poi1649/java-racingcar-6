@@ -23,8 +23,8 @@ public class Input {
         return splitNames;
     }
 
-    public static void checkName(List<String> nameList) {
-        for (String name : nameList) {
+    public static void checkName(List<String> names) {
+        for (String name : names) {
             if (name.length() > MAX_NAME_LENGTH) {
                 throw new IllegalArgumentException("자동차 이름은 5글자까지 입력 가능합니다.");
             }
