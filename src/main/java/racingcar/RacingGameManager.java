@@ -9,12 +9,12 @@ public class RacingGameManager {
     private int raceCount;
 
     public void startRace() {
-        registerCar();
+        registersCar();
         runRace();
         printWinner();
     }
 
-    public void registerCar() {
+    public void registersCar() {
         Output.inputNameMessage();
         List<String> names = Input.readName();
         Output.inputNumberMessage();
