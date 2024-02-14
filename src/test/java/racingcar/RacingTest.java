@@ -26,7 +26,12 @@ public class RacingTest {
             cars.get(i).move(FORWARD_THRESHOLD);
             assertThat(cars.get(i).getMoveDistance()).isEqualTo(1);
         }
-        for (int i = 3; i < 6; i++) {
+    }
+
+    @Test
+    void 경주_진행시_자동차_정지_테스트() {
+        List<Car> cars = new ArrayList<>();
+        for (int i = 0; i < 3; i++){
             cars.add(new Car("test" + i));
             cars.get(i).move(STOP_THRESHOLD);
             assertThat(cars.get(i).getMoveDistance()).isEqualTo(0);
