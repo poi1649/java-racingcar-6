@@ -48,8 +48,8 @@ public class RacingGameManager {
         Output.showWinner(findWinner(cars));
     }
 
-    public ArrayList<String> findWinner(List<Car> cars) {
-        ArrayList<String> winners = new ArrayList<>();
+    public List<String> findWinner(List<Car> cars) {
+        List<String> winners = new ArrayList<>();
         int highScore = findHighScore(cars);
         for (Car car : cars) {
             if (car.isWinner(highScore)) {
