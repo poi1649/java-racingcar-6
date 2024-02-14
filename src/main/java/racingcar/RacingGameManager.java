@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RacingGameManager {
-    private final ArrayList<Car> cars = new ArrayList<>();
+    private final List<Car> cars = new ArrayList<>();
     private int raceCount;
 
     public void startRace() {
@@ -46,7 +46,7 @@ public class RacingGameManager {
         Output.showWinner(findWinner(cars));
     }
 
-    public ArrayList<String> findWinner(ArrayList<Car> cars) {
+    public ArrayList<String> findWinner(List<Car> cars) {
         ArrayList<String> winners = new ArrayList<>();
         int highScore = findHighScore(cars);
         for (Car car : cars) {
@@ -57,7 +57,7 @@ public class RacingGameManager {
         return winners;
     }
 
-    private int findHighScore(ArrayList<Car> cars) {
+    private int findHighScore(List<Car> cars) {
         int highScore = 0;
         for (Car car : cars) {
             int score = car.getMoveDistance();

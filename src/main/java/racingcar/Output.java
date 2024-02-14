@@ -1,6 +1,7 @@
 package racingcar;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Output {
     private Output() {
@@ -19,7 +20,7 @@ public class Output {
         System.out.println("\n실행 결과");
     }
 
-    public static void showResult(ArrayList<Car> cars) {
+    public static void showResult(List<Car> cars) {
         for (Car car : cars) {
             showProgress(car);
         }
