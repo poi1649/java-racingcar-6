@@ -36,11 +36,11 @@ public class RacingGameManager {
 
     public void runRaceOneTime() {
         for (Car car : cars) {
-            car.move(pickNumber());
+            car.move(pickRandomNumber());
         }
     }
 
-    public int pickNumber() {
+    public int pickRandomNumber() {
         return Randoms.pickNumberInRange(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
     }
 
